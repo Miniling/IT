@@ -21,6 +21,7 @@
 <h4>IP/Domain</h4>
  - IP: Internet Protocol. 인터넷 통신규약. ex) 192.168.1.255 </br>
  - Domain: 인터넷 사이트 주소. ex) github.com </br>
-   ex) http://www.example.com => Protocol(프로토콜)=http://, Sub Domain=www, Domain Name=example, Top-Level Domain=com, Root Domain= Sub Domain + Top-level Domain </br>
+   ex) https://www.example.com => Protocol(프로토콜)=https://, Sub Domain=www, Domain Name=example, Top-Level Domain=com, Root Domain= Sub Domain + Top-level Domain </br>
  - URL: Uniform Resource Locator. 인터넷에서 각종 리소스의 위치를 가리키는 문자열 </br>
-   ex) https://www.example.com:80 => Scheme(스키마)=https, Domain Name(도메인)=www.example.com, Port(포트번호)=80 </br>
+   ex) http://www.example.com:80 => Scheme(스키마)=https, Domain Name(도메인)=www.example.com, Port(포트번호)=80 </br>
+   http=80port, https=443port (https는 도메인 뒤에 포트번호 생략, http는 도메인 뒤에 포트번호 입력해야 각 포트별 웹으로 접속 가능) </br>
