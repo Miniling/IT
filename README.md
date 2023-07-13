@@ -25,3 +25,7 @@
  - URL: Uniform Resource Locator. 인터넷에서 각종 리소스의 위치를 가리키는 문자열 </br>
    ex) http://www.example.com:80 => Scheme(스키마)=https, Domain Name(도메인)=www.example.com, Port(포트번호)=80 </br>
    http=80port, https=443port (https는 도메인 뒤에 포트번호 생략, http는 도메인 뒤에 포트번호 입력해야 각 포트별 웹으로 접속 가능) </br>
+
+<h4>Library</h4>
+라이브러리 : 소프트웨어 개발에서 자주 쓰고 기초적인 함수들을 중복 개발하는 것을 피하기 위해, 표준화된 함수 및 데이터 타입을 만들어서 모아둔 것.</br>
+ - DLL(Dynamic Link Library): 동적 링크 라이브러리. 여러 프로그램에서 동시에 사용할 수 있는 코드와 데이터를 포함하는 라이브러리.</br>
