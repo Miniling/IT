@@ -66,7 +66,6 @@ OFD : Optical Fiber Distribution. 광분배함. </br>
  자율주행/커넥티드 카 => 내/외부 통신 사용. </br>
  </br>
 <h4>CAN</h4>
- </br>
  물리 계층 </br>
   - 네트워크의 구성 </br>
   - 통신 선의 길이 </br>
