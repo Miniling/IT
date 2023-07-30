@@ -101,3 +101,38 @@ OFD : Optical Fiber Distribution. 광분배함. </br>
    - 1 bit ACK delimiter: single(always) recessive bit </br>
   - End of Frame: 7 recessive bits (끝. 프레임 포멧 정의) </br>
    </br>
+
+<h4>CAN 통신 데이터링크 계층</h4>
+CRC : 수신한 데이터를 안전하게 받았는지를 수신 확인으로 데이터 안정성 보장 </br>
+ACK: 수신 측에서 제대로 전달됐고, 정확하다를 판단하기 위해 알려줌. 정확한 데이터 수신 시 발신자에게 알림. </br>
+CAN은 부가 정보를 이용하여 안정적인 데이터를 전달.  </br>
+ </br>
+데이터링크 계층 동작 원리 </br>
+- Arbitration Field (중재) 필드 </br>
+  : 메시지 구분용 ID 존재. 숫자로 표현. (ex. 엔진:0, 브레이크:1, ...) </br>
+   메시지 간 우선순위 선정에도 사용. </br>
+   각 제어기는 순차적으로 메시지를 보낼 필요가 있음 => 번호가 낮을 수록 높은 우선 순위 </br>
+   각 제어기에서 동시에 메시지를 보내려고 했을 경우, 번호가 더 낮은 메시지를 먼저 전달(수행) 후에 다음 메시지 실행 </br>
+   안전에 민감한 경우: 낮은 번호.  안전과 거리가 있는 경우: 높은 번호  => 메시지 우선 순위 결정 </br>
+   데이터의 형태 + 메시지의 정보 </br>
+ </br>
+
+<h4>LIN 통신의 구조와 원리</h4>
+LIN(Local Interconnect Network) </br>
+: 서브 네트워크 방식=> 간단한 기능 제어에 사용. </br>
+  single wire 방식. </br>
+  최대 속도 20kbps => 저가/저속 통신으로 많이 사용됨. </br>
+  5개 자동차 회사와 반도체 개발 회사가 개발 </br>
+  => 국제 표준으로 정의. </br>
+   간단한 기능의 ECU 제어용 로컬 네트워크 (센서, 액추에이터, 스위치) </br>
+  노드 16개 이하. 메시지 64개 이하. </br>
+  CAN 네트워크의 서브 네트워크로 사용. </br>
+  한 제어기의 서브로 센서나 액추에이터에 사용 </br>
+  Single Master/Multi Slave 구조 </br>
+  : 명령을 내리는 Master, 명령을 수행하는 Slave. </br>
+    Master <-> Slave LIN-Bus로 연결 (선 1개) </br>
+   Time-triggered Schedule Communication </br>
+    : 시간을 정해놓고 데이터 전달 </br>
+    single-wire 방식에 적합 </br>
+    Master의 스케줄에 따른 Slave 동작  </br>
+ </br>
