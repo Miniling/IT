@@ -8,7 +8,7 @@
  - L4 : 로드밸런싱. 네트워크 패킷을 지정해둔 포트들로 분산하여 배분. 서비스를 분산하기 때문에 한 쪽의 이슈에 대응 가능. </br>
  - L7 : 웹방화벽, 보안 스위치. 패킷을 분석하여 데이터 확인 가능. </br>
 </br>
- - Mesh Topology : 거미줄처럼 엮여있는 형태. 하나가 끊겨도 연결 유지. 구조 복잡 </br>
+ - Mesh Topology : 망형. 거미줄처럼 엮여있는 형태. 하나가 끊겨도 연결 유지. 대량 데이터의 이동에도 병목 현상 최소화. 대규모 백본 네트워크에서 주로 사용. 구조 복잡. 모든 노드가 전부 연결되어있으면 Full-Mesh, 부분만 연결되어있으면 Partial-Mesh.  </br>
  - Ring Topology : 원형. 1:1 매칭. </br>
  - Star Topology : 중앙 장치 주변에 위성 장치 존재. </br>
  - Tree Topology : Star Topology의 복수 형태. </br>
@@ -19,6 +19,8 @@ MPLS : Multi-Protocol Label Switching. 데이터 패킷에 라벨을 붙여 스�
 NAC : Network Access Control. 시스템 인증 및 네트워크 보안 기술. 네트워크에 액세스 하려는 장치 식별 및 보안 인증. </br>
 OFD : Optical Fiber Distribution. 광분배함. </br>
 </br>
+
+CRC : 순환중복검사(Cyclic Redundancy Check). 송신한 데이터를 수신측에서 검사(= 데이터 무결성 검사). 데이터에 붙은 값을 지정된 crc 다항식으로 나누어 나머지가 0이면 정상, 0이 아니면 오류.
 
 <h4>OSI 7계층</h4>
  - 1계층 : 물리계층. 전기적, 기계적, 기능적인 특성을 이용한 통신. </br>
